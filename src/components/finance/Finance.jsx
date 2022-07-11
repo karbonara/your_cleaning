@@ -1,3 +1,4 @@
+import ArrowRightBlue from "../../assets/arrowRightBlue.svg";
 import "./Finance.scss";
 
 const Finance = () => {
@@ -8,8 +9,14 @@ const Finance = () => {
                 <div className="finance__item-balance">Баланс баллов</div>
                 <div className="finance__item-number">3500</div>
                 <div>
-                    <a className="finance__item-link" href="/">Обменять</a>
-                    <a className="finance__item-link" href="/">Ввести промокод</a>
+                    <a className="finance__item-link" href="/">
+                        Обменять
+                        <img src={ArrowRightBlue} alt="arrow" />
+                    </a>
+                    <a className="finance__item-link" href="/">
+                        Ввести промокод
+                        <img src={ArrowRightBlue} alt="arrow" />
+                    </a>
                 </div>
             </div>
         </div>

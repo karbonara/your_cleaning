@@ -33,6 +33,9 @@
   .page__main-container {
     width: 90%;
   }
+  .page__main-conteiner-small {
+    justify-content: space-between;
+  }
   .page__main {
     justify-content: center;
   }

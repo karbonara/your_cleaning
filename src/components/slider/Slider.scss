@@ -22,6 +22,14 @@
     color: #B6BEC8;
 }
 
+.slick-dots li button:before {
+    font-size: 9px !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #4C75F2 !important;
+}
+
 @media(max-width: 1700px) {
     .slider__wrapper {
         width: 560px;

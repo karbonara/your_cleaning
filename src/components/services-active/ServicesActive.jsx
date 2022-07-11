@@ -1,4 +1,5 @@
 import Time from "../../assets/time.svg"
+import ArrowRight from "../../assets/arrowRight.svg";
 import "./ServicesActive.scss";
 
 const ServicesActive = () => {
@@ -17,9 +18,11 @@ const ServicesActive = () => {
                         <li key={index} className="services-active__item">
                             <img src={Time} alt="" />
                             <div className="services__item-title">Склад</div>
-                            <div className="services__item-price">до {item.date}</div>
+                            <div className="services__item-date">до {item.date}</div>
                             <div className="services__item-info">
-                                <a href={item.link}>Еще {item.day} дней</a>
+                                <a href={item.link}>Еще {item.day} дней
+                                    <img src={ArrowRight} alt="" />
+                                </a>
                             </div>
                         </li>
                     ))

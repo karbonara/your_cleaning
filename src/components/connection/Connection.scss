@@ -47,6 +47,12 @@
     }
 }
 
+@media(max-width: 1220px) {
+    .connection {
+        margin: 0;
+    }
+}
+
 @media(max-width: 960px) {
     .connection {
         width: inherit;

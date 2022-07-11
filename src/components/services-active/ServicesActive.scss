@@ -7,7 +7,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 24px;
-    color: #B6BEC8;
+    color: #4C75F2;
 }
 
 .services-active__items {
@@ -36,20 +36,19 @@
 
         .services__item-title {
             margin-top: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-weight: 700;
             font-size: 16px;
             line-height: 20px;
             color: #14161D;
         }
 
-        .services__item-price {
-            margin-bottom: 18px !important;
+        .services__item-date {
+            margin-bottom: 18px;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 12px;
             line-height: 20px;
             color: #14161D;
-            margin-bottom: 8px;
         }
 
         .services__item-info {
@@ -62,6 +61,10 @@
             a {
                 text-decoration: none;
                 color: #C2C2C2;
+
+                img {
+                    margin-left: 10px;
+                }
             }
         }
     }
@@ -93,7 +96,7 @@
 
     .services-active__items {
         .services-active__item {
-            width: 194px;
+            width: 28%;
         }
     }
 }
@@ -103,7 +106,7 @@
         flex-wrap: wrap;
 
         .services-active__item {
-            width: 224px;
+            width: 174px;
             margin: 22px 0;
         }
     }
