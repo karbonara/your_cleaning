@@ -143,3 +143,13 @@
         }
     }
 }
+
+@media(max-width: 400px) {
+    .story__item-progress {
+
+        .progress {
+            width: 65% !important;
+        }
+
+    }
+}

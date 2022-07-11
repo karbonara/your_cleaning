@@ -112,3 +112,17 @@
         }
     }
 }
+
+@media(max-width: 400px) {
+    .nav__wrapper .nav__info {
+        justify-content: flex-end;
+    }
+
+    .nav__bell {
+        margin-right: 20px;
+    }
+
+    .localization {
+        display: none !important;
+    }
+}

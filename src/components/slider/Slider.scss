@@ -49,3 +49,13 @@
         width: 416px;
     }
 }
+
+@media(max-width: 500px) {
+    .slider__wrapper {
+        width: 100%;
+    }
+
+    .slider__img {
+        width: 100%;
+    }
+}

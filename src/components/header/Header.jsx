@@ -19,7 +19,7 @@ const Header = () => {
                 </span>
 
                 <div className="nav__info">
-                    <span className="nav__text">
+                    <span className="nav__text localization">
                         <img src={Localization} alt="" />
                         <span>Русский</span>
                     </span>
