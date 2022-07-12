@@ -1,0 +1,131 @@
+.calculator__cleaning-titles {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0;
+}
+
+.calculator-text {
+    font-weight: 300;
+    font-size: 22px;
+    color: #000000;
+}
+
+.calculator-text__container {
+    position: relative;
+
+    img {
+        margin-left: 22px;
+        cursor: pointer;
+    }
+}
+
+.calculator__cleaning-title {
+    cursor: pointer;
+    width: 255px;
+    padding: 25px 12px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #000000;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.calculator__cleaning-title-active {
+    cursor: pointer;
+    width: 255px;
+    padding: 25px 12px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #2696D6;
+    box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.calculator__cleaning-tabs {
+    display: flex;
+    justify-content: space-between;
+
+    .tab {
+        cursor: pointer;
+        width: 255px;
+        padding: 12px;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 20px;
+        color: #000000;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .tab__active {
+        color: #FFFFFF;
+        background: #2696D6;
+        box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.calculator__cleaning-content {
+    border-bottom: 1px solid #2696D6;
+
+    .content {
+        display: none;
+        padding: 42px 0;
+    }
+
+    .content__container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 42px;
+    }
+
+    .content__rooms {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 22px;
+            width: 50px;
+            height: 50px;
+            background: #FFFFFF;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .content__active {
+        display: block;
+    }
+
+    .content__label {
+        margin-left: 42px;
+    }
+
+    .content__input {
+        width: 200px;
+        padding: 12px;
+        margin-right: 12px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        border: none;
+    }
+}

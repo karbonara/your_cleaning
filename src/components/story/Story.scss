@@ -144,8 +144,34 @@
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 500px) {
+    .story__items {
+        .story__item {
+            position: relative;
+
+            .story__item-close {
+                position: absolute;
+                top: 0;
+                right: 19px;
+            }
+
+            .story__item-info {
+                flex-wrap: wrap;
+                padding: 26px 0 0 0;
+
+                .story__item-info-container {
+                    display: flex;
+                    flex-direction: inherit;
+                    width: 100%;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+
     .story__item-progress {
+        padding: 18px 0 12px 0 !important;
 
         .progress {
             width: 65% !important;

@@ -119,3 +119,11 @@
         }
     }
 }
+
+@media(max-width: 350px) {
+    .services-active__items {
+        .services-active__item {
+            width: 138px;
+        }
+    }
+}
