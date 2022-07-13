@@ -1,0 +1,22 @@
+.timetable__items {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    .timetable__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 38px;
+        margin: 34px 0;
+        background: #FFFFFF;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.13);
+        border-radius: 60px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.273);
+        }
+    }
+}

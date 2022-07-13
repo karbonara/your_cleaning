@@ -78,39 +78,59 @@ const CalculatorStock = () => {
         <div
           className={toggleState === 2 ? "content content__active" : "content"}
         >
-          <div className="content__boxes">
-            <div className="content__box-img">
-              <span className="content__box-img-text-1">50 см</span>
-              <img src={BoxSmallImg} alt="box" />
-              <span className="content__box-img-text-2">50 см</span>
+          <div className="content__wrapper">
+            <div className="content__boxes">
+              <div className="content__box-img">
+                <span className="content__box-img-text-1">50 см</span>
+                <img src={BoxSmallImg} alt="box" />
+                <span className="content__box-img-text-2">50 см</span>
+              </div>
+              <div className="content__boxes-text">200 ₽/мес</div>
             </div>
-            <div className="content__boxes-text">200 ₽/мес</div>
-          </div>
-          <div className="content__boxes">
-            <div className="content__box-img">
-              <span className="content__box-img-text-big-1">100 см</span>
-              <img className="content__box-img-big" src={BoxBigImg} alt="box" />
-              <span className="content__box-img-text-big-2">100 см</span>
+            <div className="content__boxes">
+              <div className="content__box-img">
+                <span className="content__box-img-text-big-1">100 см</span>
+                <img className="content__box-img-big" src={BoxBigImg} alt="box" />
+                <span className="content__box-img-text-big-2">100 см</span>
+              </div>
+              <div className="content__boxes-text">200 ₽/мес</div>
             </div>
-            <div className="content__boxes-text">200 ₽/мес</div>
           </div>
+
+          <div className="calculator-stock__input-wrapper">
+            <div className="calculator-stock__title">Что будете хранить?</div>
+            <input className="calculator-stock__input" placeholder="9" type="number" />
+          </div>
+
+          <div className="calculator-stock__input-wrapper">
+            <div className="calculator-stock__title">Длительность хранения в месяцах</div>
+            <input className="calculator-stock__input" placeholder="9" type="number" />
+          </div>
+
         </div>
         <div
           className={toggleState === 3 ? "content content__active" : "content"}
         >
-          <ul className="additional-services__items">
-            {
-              inventory.map((item, index) => (
-                <li className="additional-services__item" key={index}>
-                  <div className="additional-services__item-text-main">
-                    <div className="additional-services__item-text">{item.title}</div>
-                    <div className="additional-services__item-text">{item.price} ₽ </div>
-                  </div>
-                  <img src={item.img} alt={item.title} />
-                </li>
-              ))
-            }
-          </ul>
+          <div className="content__wrapper">
+            <ul className="additional-services__items">
+              {
+                inventory.map((item, index) => (
+                  <li className="additional-services__item" key={index}>
+                    <div className="additional-services__item-text-main">
+                      <div className="additional-services__item-text">{item.title}</div>
+                      <div className="additional-services__item-text">{item.price} ₽ </div>
+                    </div>
+                    <img src={item.img} alt={item.title} />
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div className="calculator-stock__input-wrapper">
+            <div className="calculator-stock__title">Длительность хранения в месяцах</div>
+            <input className="calculator-stock__input" placeholder="9" type="number" />
+          </div>
+
         </div>
 
       </div>
