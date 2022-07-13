@@ -31,20 +31,19 @@
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: 0.3s;
+
+    &:hover {
+        color: #FFFFFF;
+        background: #2696D6;
+    }
 }
 
 .calculator__cleaning-title-active {
-    cursor: pointer;
-    width: 255px;
-    padding: 25px 12px;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 20px;
+
     color: #FFFFFF;
     background: #2696D6;
     box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
-    transition: 0.3s;
+
 }
 
 .calculator__cleaning-tabs {
@@ -65,7 +64,8 @@
         transition: 0.3s;
 
         &:hover {
-            opacity: 0.7;
+            color: #FFFFFF;
+            background: #2696D6;
         }
     }
 
@@ -107,6 +107,12 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 30px;
             cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: #FFFFFF;
+                background: #2696D6;
+            }
         }
     }
 
