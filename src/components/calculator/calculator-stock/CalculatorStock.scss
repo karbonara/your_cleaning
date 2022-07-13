@@ -15,7 +15,7 @@
         cursor: pointer;
         width: 270px;
         height: 80px;
-        padding: 29px 12px;
+        padding: 26px 12px;
         text-align: center;
         box-sizing: border-box;
         font-size: 20px;
@@ -25,6 +25,13 @@
         box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         transition: 0.3s;
+
+
+        &:hover {
+            background: #5AD6A9;
+            color: #FFFFFF;
+
+        }
     }
 
     .tab__active {
@@ -48,10 +55,157 @@
     .content__boxes {
         width: 415px;
         height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 63px;
         box-sizing: border-box;
         cursor: pointer;
         background: #FFFFFF;
         box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.15), 2px 2px 8px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
+        transition: 0.2s;
+
+        &:hover {
+            background: #5AD6A9;
+            color: #FFFFFF;
+
+        }
+
+        .content__boxes-text {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 100%;
+        }
+
+        .content__box-img {
+            position: relative;
+        }
+
+        .content__box-img-big {
+            margin-top: 12px;
+        }
+
+        .content__box-img-text-1 {
+            position: absolute;
+            top: -30px;
+            left: 8px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 90px;
+                height: 1px;
+                background: #000000;
+                bottom: 0px;
+                left: -17px;
+            }
+        }
+
+        .content__box-img-text-2 {
+            position: absolute;
+            transform: rotate(90deg);
+            width: 48px;
+            top: 16px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 80px;
+                height: 1px;
+                background: #000000;
+                bottom: 0px;
+                left: -17px;
+            }
+        }
+
+        .content__box-img-text-big-1 {
+            position: absolute;
+            top: -17px;
+            left: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 120px;
+                height: 1px;
+                background: #000000;
+                bottom: 0px;
+                left: -21px;
+            }
+        }
+
+        .content__box-img-text-big-2 {
+            position: absolute;
+            transform: rotate(90deg);
+            width: 50px;
+            top: 40px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 110px;
+                height: 1px;
+                background: #000000;
+                bottom: 0px;
+                left: -30px;
+            }
+        }
+    }
+}
+
+.additional-services__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+
+    .additional-services__item {
+        width: 270px;
+        height: 150px;
+        padding: 12px;
+        margin: 18px 0;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.2s;
+
+        .additional-services__item-text-main {
+            padding-top: 11px;
+            text-align: end;
+            transition: 0.2s;
+        }
+
+        .additional-services__item-text {
+            margin-bottom: 6px;
+            padding: 0 0px 0 55px;
+            position: relative;
+            z-index: 999;
+            font-weight: 300;
+            font-size: 18px;
+            color: #000000;
+            transition: 0.2s;
+            line-height: 100%;
+        }
+
+        img {
+            position: absolute;
+            left: -18px;
+            top: 32px;
+        }
+
+        &:hover {
+            background: #5AD6A9;
+
+            .additional-services__item-text {
+                color: #FFFFFF;
+            }
+        }
     }
 }
