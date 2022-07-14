@@ -7,7 +7,6 @@ const Cabinet = () => {
     <>
       <div>
         <Header />
-
         <Footer />
       </div>
     </>

@@ -1,5 +1,7 @@
 import Tabs from "../../../components/client/tabs/Tabs";
 import AvatarBig from "../../../assets/avatar-big.svg";
+import { Link } from "react-router-dom";
+
 import "./Main.scss";
 
 const Main = () => {
@@ -12,7 +14,7 @@ const Main = () => {
           <div className="main__header-info-balance-container">
             <span className="main__header-info-balance-text">Баланс:</span>
             <span className="main__header-info-balance">455 ₽</span>
-            <a href="/" className="main__header-info-balance-button">Пополнить</a>
+            <Link to="/balance" className="main__header-info-balance-button">Пополнить</Link>
           </div>
         </div>
       </div>

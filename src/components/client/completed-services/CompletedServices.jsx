@@ -35,7 +35,7 @@ const CompletedServices = () => {
                             </div>
                             <div>
                                 <div></div>
-                                <div>Оставить чаевые</div>
+                                <div >Оставить чаевые</div>
                             </div>
                             <div>
                                 <div>{item.date}</div>
