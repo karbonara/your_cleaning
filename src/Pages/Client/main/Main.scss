@@ -1,15 +1,17 @@
 .main__wrapper {
-    width: 1800px;
+    width: 95%;
+    max-width: 1800px;
+    padding-top: 112px;
     box-shadow: 1px 1px 4px #00000047;
     margin-left: auto;
     border-top-left-radius: 20px;
-    padding: 32px;
     box-sizing: border-box;
 }
 
 .main__header-info {
     display: flex;
     align-items: center;
+    padding-left: 112px;
 }
 
 .main__header-info-container {

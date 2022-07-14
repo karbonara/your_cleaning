@@ -96,3 +96,50 @@
     line-height: 137.5%;
     color: #FFFFFF;
 }
+
+@media(max-width: 1500px) {
+    .footer__wrapper {
+        width: 1300px;
+    }
+}
+
+@media(max-width: 1380px) {
+    .footer__wrapper {
+        width: 95%;
+    }
+
+    .footer__phone-desktop {
+        transform: translateY(40px);
+        width: 439px;
+    }
+
+    .footer__container {
+        width: 230px;
+    }
+
+    .footer__text-container {
+        margin-bottom: 32px;
+    }
+
+    .footer__download-text {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .footer_number {
+        font-size: 16px;
+    }
+
+}
+
+@media(max-width: 1133px) {
+    .footer__phone-desktop {
+        display: none;
+    }
+}
+
+@media(max-width: 690px) {
+    .footer__container-footer__download {
+        display: none;
+    }
+}

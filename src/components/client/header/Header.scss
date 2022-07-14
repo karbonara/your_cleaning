@@ -89,3 +89,31 @@
         line-height: 100%;
     }
 }
+
+@media(max-width: 1500px) {
+    .nav__main {
+        width: 1300px;
+    }
+}
+
+@media(max-width: 1380px) {
+    .nav__main {
+        width: 95%;
+    }
+}
+
+@media(max-width: 1133px) {
+    .nav__container {
+        width: 220px;
+    }
+
+    .nav__info-container {
+        width: 420px;
+    }
+}
+
+@media(max-width: 690px) {
+    .nav__cabinet {
+        display: none;
+    }
+}
