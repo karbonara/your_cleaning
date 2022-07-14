@@ -8,10 +8,14 @@
 }
 
 .nav__info-container {
-    width: 500px;
+    width: 410px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav__icon-client {
+    margin-right: 6px;
 }
 
 .nav__container {

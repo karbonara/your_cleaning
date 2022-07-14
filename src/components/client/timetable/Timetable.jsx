@@ -27,19 +27,21 @@ const Timetable = () => {
       title: 'ТвояХимчистка мебели',
       text: 'Приедет 25 окт 2021 в 15:00',
     },
-  ]
+  ];
 
   return (
     <section>
-      <ul>
+      <ul className="timetable__tab-items">
         {
           timetable.map((item, index) => (
-            <li key={index}>
-              <div>{item.title}</div>
-              <div>{item.text}</div>
-              <div>
-                <div>Изменить</div>
-                <div>Отмена</div>
+            <li className="timetable__tab-item" key={index}>
+              <div className="timetable__tab-item-container">
+                <div className="timetable__tab-text-ct timetable__tab-text">{item.title}</div>
+                <div className="timetable__tab-text">{item.text}</div>
+              </div>
+              <div className="timetable__tab-item-container">
+                <div className="timetable__tab-button">Изменить</div>
+                <div className="timetable__tab-button">Отмена</div>
               </div>
             </li>
           ))

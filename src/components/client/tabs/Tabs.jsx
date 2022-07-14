@@ -1,6 +1,9 @@
-import "./Tabs.scss";
 import { useState } from "react";
 import Timetable from "../timetable/Timetable";
+import CompletedServices from "../completed-services/CompletedServices";
+import PaymentHistory from "../payment-history/PaymentHistory";
+import Settings from "../settings/Settings";
+import "./Tabs.scss";
 
 const Tabs = () => {
 
@@ -38,7 +41,17 @@ const Tabs = () => {
         <div
           className={toggleState === 2 ? "content tab__content-active" : "content"}
         >
-
+          <CompletedServices />
+        </div>
+        <div
+          className={toggleState === 3 ? "content tab__content-active" : "content"}
+        >
+          <PaymentHistory />
+        </div>
+        <div
+          className={toggleState === 4 ? "content tab__content-active" : "content"}
+        >
+          <Settings />
         </div>
       </div>
     </section>

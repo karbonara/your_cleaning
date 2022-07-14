@@ -1,7 +1,7 @@
 .tabs__items {
     display: flex;
     padding: 0;
-    margin: 72px 0 0 112px;
+    margin: 92px 0 0 112px;
     list-style: none;
 
     .tab__item {
@@ -13,6 +13,11 @@
         font-weight: 300;
         font-size: 20px;
         line-height: 100%;
+        cursor: pointer;
+
+        &:hover {
+            background: #F2F4F7;
+        }
     }
 
     .tab__item-active {
