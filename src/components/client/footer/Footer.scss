@@ -5,7 +5,6 @@
 
 .footer__wrapper {
     display: flex;
-    justify-content: space-between;
     width: 1430px;
     margin: 0 auto;
     align-items: center;
@@ -14,13 +13,9 @@
 
 .footer__container {
     width: 300px;
+    margin-right: 36px;
 }
 
-.footer__phone-desktop {
-    transform: translateY(23px);
-    margin-top: -71px;
-    width: 496px;
-}
 
 .footer__text-container {
     margin-bottom: 52px;

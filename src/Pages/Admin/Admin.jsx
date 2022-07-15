@@ -1,4 +1,3 @@
-import Calculator from "../../components/calculator/Calculator";
 import Connection from "../../components/connection/Connection";
 import Finance from "../../components/finance/Finance";
 import Header from "../../components/header/Header";
@@ -29,7 +28,6 @@ const Admin = () => {
             </div>
           </div>
         </section>
-        <Calculator />
       </div>
     </div>
   )

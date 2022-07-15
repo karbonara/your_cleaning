@@ -1,14 +1,16 @@
-const Balance = () => {
-    return (
-        <section>
-            <h2>Выберите способ пополнения баланса:</h2>
-            <div>
+import "./Balance.scss";
 
-            </div>
-            <input type="text" placeholder="Сумма" />
-            <a href="/">Далее</a>
-        </section>
-    )
+const Balance = () => {
+  return (
+    <section>
+      <div className="balance__title">Выберите способ пополнения баланса:</div>
+      <div>
+
+      </div>
+      <input className="balance__input" type="number" placeholder="Сумма" />
+      <a className="balance__button" href="/">Далее</a>
+    </section>
+  )
 }
 
 export default Balance;

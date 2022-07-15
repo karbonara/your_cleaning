@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    font-family: 'Montserrat', sans-serif;
 
     .completed-services__item {
         display: flex;
@@ -13,5 +14,25 @@
         background: #FFFFFF;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.13);
         border-radius: 20px;
+    }
+
+    .completed-services__text {
+        width: 454px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 100%;
+    }
+
+    .completed-services__button {
+        margin-left: 12px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 100%;
+        color: #2696D6;
+    }
+
+    .completed-services__container {
+        display: flex;
+        align-items: center;
     }
 }

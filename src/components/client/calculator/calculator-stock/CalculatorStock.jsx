@@ -1,11 +1,11 @@
-import BoxSmallImg from "../../../assets/img-services/boxSmall.svg";
-import BoxBigImg from "../../../assets/img-services/boxBig.svg";
-import TiresImg from "../../../assets/img-services/tires.svg";
-import BikeImg from "../../../assets/img-services/bake.svg";
-import SkisImg from "../../../assets/img-services/skis.svg";
-import KickScooterImg from "../../../assets/img-services/kickScooter.svg";
-import FurnitureImg from "../../../assets/img-services/furniture.svg";
-import Appliances from "../../../assets/img-services/appliances.svg";
+import BoxSmallImg from "../../../../assets/img-services/boxSmall.svg";
+import BoxBigImg from "../../../../assets/img-services/boxBig.svg";
+import TiresImg from "../../../../assets/img-services/tires.svg";
+import BikeImg from "../../../../assets/img-services/bake.svg";
+import SkisImg from "../../../../assets/img-services/skis.svg";
+import KickScooterImg from "../../../../assets/img-services/kickScooter.svg";
+import FurnitureImg from "../../../../assets/img-services/furniture.svg";
+import Appliances from "../../../../assets/img-services/appliances.svg";
 import { useState } from "react";
 import "./CalculatorStock.scss";
 

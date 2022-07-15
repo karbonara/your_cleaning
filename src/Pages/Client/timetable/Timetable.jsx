@@ -1,3 +1,4 @@
+import Close from "../../../assets/close.svg"
 import "./Timetable.scss";
 
 const Timetable = () => {
@@ -34,10 +35,15 @@ const Timetable = () => {
         timetable.map((item, index) => (
           <li key={index} className="timetable__item">
             <div>
-              <div>{item.title}</div>
-              <div>{item.text}</div>
+              <div className="timetable__item-title">{item.title}</div>
+              <div className="timetable__item-text">{item.text}</div>
             </div>
-            <div>{item.date}</div>
+            <div>
+              {item.date}
+              <span>
+                <img className="timetable__item-img" src={Close} alt="" />
+              </span>
+            </div>
           </li>
         ))
       }

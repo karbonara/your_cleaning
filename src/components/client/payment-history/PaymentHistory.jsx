@@ -31,11 +31,11 @@ const PaymentHistory = () => {
           paymentHistory.map((item, index) => (
             <li className="completed-services__item" key={index}>
               <div>
-                <div>{item.title}</div>
+                <div className="completed-services__text">{item.title}</div>
               </div>
-              <div>
-                <div>{item.price}</div>
-                <div>Чек об оплате</div>
+              <div className="completed-services__container">
+                <div>{item.price}  ₽</div>
+                <div className="completed-services__button">Чек об оплате</div>
               </div>
               <div>
                 <div>{item.date}</div>

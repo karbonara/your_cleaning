@@ -4,6 +4,7 @@ import Layout from "./Pages/Client/Layout";
 import { Routes, Route } from "react-router-dom";
 import Main from "./Pages/Client/main/Main";
 import Balance from "./Pages/Client/balance/Balance";
+import Calculator from "./Pages/Client/calculator/Calculator";
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/balance" element={<Balance />} />
           <Route path="/timetable" element={<Timetable />} />
+          <Route path="/calculator" element={<Calculator />} />
         </Route>
         <Route path="admin" element={<Admin />} />
       </Routes>

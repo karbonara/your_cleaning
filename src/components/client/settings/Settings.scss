@@ -1,0 +1,24 @@
+.setting {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 100%;
+
+    .setting__data {
+        display: flex;
+        margin: 42px 0;
+    }
+
+    .setting__data-item {
+        margin-right: 82px;
+    }
+
+    .setting__button-add {
+        padding: 0px 18px;
+        font-size: 28px;
+        border: none;
+        color: #ffffff;
+        background: #2696D6;
+        border-radius: 10px;
+    }
+}

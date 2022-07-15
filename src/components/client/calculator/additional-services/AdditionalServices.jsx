@@ -1,18 +1,18 @@
-import TablewareImg from "../../../assets/img-services/tableware.svg"
-import WindowImg from "../../../assets/img-services/window.svg";
-import WashImg from "../../../assets/img-services/wash.svg";
-import IroningImg from "../../../assets/img-services/ironing.svg";
-import DisinfectionImg from "../../../assets/img-services/disinfection.svg";
-import KeyImg from "../../../assets/img-services/key.svg";
-import DepartureImg from "../../../assets/img-services/departure.svg";
-import LeavingTheRegionImg from "../../../assets/img-services/leavingTheRegion.svg";
-import TrayImg from "../../../assets/img-services/tray.svg";
-import UnderwearImg from "../../../assets/img-services/underwear.svg";
-import BalconyImg from "../../../assets/img-services/balcony.svg";
-import FridgeImg from "../../../assets/img-services/fridge.svg";
-import OvenImg from "../../../assets/img-services/oven.svg";
-import BakeImg from "../../../assets/img-services/bake.svg";
-import PutAwayImg from "../../../assets/img-services/putAway.svg";
+import TablewareImg from "../../../../assets/img-services/tableware.svg"
+import WindowImg from "../../../../assets/img-services/window.svg";
+import WashImg from "../../../../assets/img-services/wash.svg";
+import IroningImg from "../../../../assets/img-services/ironing.svg";
+import DisinfectionImg from "../../../../assets/img-services/disinfection.svg";
+import KeyImg from "../../../../assets/img-services/key.svg";
+import DepartureImg from "../../../../assets/img-services/departure.svg";
+import LeavingTheRegionImg from "../../../../assets/img-services/leavingTheRegion.svg";
+import TrayImg from "../../../../assets/img-services/tray.svg";
+import UnderwearImg from "../../../../assets/img-services/underwear.svg";
+import BalconyImg from "../../../../assets/img-services/balcony.svg";
+import FridgeImg from "../../../../assets/img-services/fridge.svg";
+import OvenImg from "../../../../assets/img-services/oven.svg";
+import BakeImg from "../../../../assets/img-services/bake.svg";
+import PutAwayImg from "../../../../assets/img-services/putAway.svg";
 import "./AdditionalServices.scss";
 
 const AdditionalServices = () => {

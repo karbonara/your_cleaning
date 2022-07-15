@@ -1,4 +1,4 @@
-import QuestionIcon from "../../../assets/questionIcon.svg";
+import QuestionIcon from "../../../../assets/questionIcon.svg";
 import { useState } from "react";
 import "./CalculatorCleaning.scss";
 
