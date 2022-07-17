@@ -41,3 +41,21 @@
         width: 240px;
     }
 }
+
+@media(max-width: 1040px) {
+    .timetable__tab-item {
+        width: 100%;
+        padding: 28px 12px;
+        box-sizing: border-box;
+
+        .timetable__tab-text {
+            margin-left: 0;
+        }
+    }
+}
+
+@media(max-width: 530px) {
+    .timetable__tab-item {
+        flex-wrap: wrap;
+    }
+}

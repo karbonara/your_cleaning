@@ -10,6 +10,7 @@ import "./Header.scss";
 const Header = () => {
 
   const [openModal, setOpenModal] = useState(false);
+  const nameUser = 'София';
 
   const handleOpenModal = () => {
     setOpenModal(!openModal);
@@ -28,7 +29,7 @@ const Header = () => {
           </div>
         </div>
         <div className="nav__info-container">
-          <div>Здравствуйте, София!</div>
+          <div className="nav__info-name">Здравствуйте, {nameUser} !</div>
           <div>
             <img src={BellClient} alt="icon" />
           </div>

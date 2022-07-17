@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav__info-container {
@@ -60,7 +61,6 @@
     .nav__cabinet-modal-link {
         display: flex;
         padding: 12px 0px 12px 22px;
-        font-family: 'Montserrat', sans-serif;
         color: #000000;
         font-weight: 300;
         font-size: 15px;
@@ -72,7 +72,6 @@
         display: flex;
         align-items: center;
         text-align: center;
-        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
@@ -101,7 +100,6 @@
     .timetable__title {
         margin-left: 12px;
         margin-right: 23px;
-        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -109,7 +107,6 @@
     }
 
     .timetable__text {
-        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 18px;
@@ -142,5 +139,35 @@
 @media(max-width: 690px) {
     .nav__cabinet {
         display: none;
+    }
+
+    .nav__info-name {
+        display: none;
+    }
+
+    .nav__container {
+        width: auto;
+    }
+
+    .nav__info-container {
+        width: auto;
+    }
+
+    .timetable {
+        width: 99%;
+
+        img {
+            width: 30px;
+        }
+
+        .timetable__title {
+            margin-left: 8px;
+            margin-right: 5px;
+            font-size: 15px;
+        }
+
+        .timetable__text {
+            font-size: 12px;
+        }
     }
 }

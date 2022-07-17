@@ -134,6 +134,11 @@
 }
 
 @media(max-width: 690px) {
+    .footer__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .footer__container-footer__download {
         display: none;
     }

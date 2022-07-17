@@ -46,3 +46,35 @@
     box-sizing: border-box;
     background: #ffffff;
 }
+
+@media(max-width: 1040px) {
+    .tabs__items {
+        margin: 92px 0 0 0px;
+
+        .tab__item {
+            padding: 12px 12px;
+            font-size: 16px;
+        }
+    }
+
+    .tab__content {
+        padding: 0;
+    }
+
+    .tab__content-active {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+        border-top-left-radius: inherit;
+    }
+}
+
+@media(max-width: 530px) {
+    .tab__content-active {
+        width: 100%;
+        padding: 11px;
+        box-shadow: none;
+        border-top-left-radius: inherit;
+    }
+
+}
