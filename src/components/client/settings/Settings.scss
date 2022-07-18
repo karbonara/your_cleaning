@@ -64,19 +64,19 @@
     }
 
     .css-jsexje-MuiSwitch-thumb {
-        border: 1px solid #2696D6;
-        width: 16px;
-        height: 16px;
-        transform: translate(2px, 2px);
+        border: 1px solid #2696D6 !important;
+        width: 16px !important;
+        height: 16px !important;
+        transform: translate(2px, 2px) !important;
     }
 
     .css-1yjjitx-MuiSwitch-track {
-        border: 1px solid #2696D6;
-        background: none;
+        border: 1px solid #2696D6 !important;
+        background: none !important;
     }
 
     .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
-        border: 1px solid #2696D6;
-        background: none;
+        border: 1px solid #2696D6 !important;
+        background: none !important;
     }
 }
