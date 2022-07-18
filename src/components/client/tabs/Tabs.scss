@@ -69,6 +69,12 @@
     }
 }
 
+@media(max-width: 640px) {
+    .tabs__items {
+        flex-wrap: wrap;
+    }
+}
+
 @media(max-width: 530px) {
     .tab__content-active {
         width: 100%;

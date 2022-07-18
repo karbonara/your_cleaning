@@ -69,9 +69,13 @@
 }
 
 @media(max-width: 690px) {
+    .main__wrapper {
+        padding-top: 44px;
+    }
+
     .main__header-info {
-        padding: 0;
-        justify-content: center;
+        padding-left: 43px;
+
 
         img {
             width: 55px;

@@ -45,6 +45,11 @@
         color: #ffffff;
         background: #2696D6;
         border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
     }
 
     .setting__data-switchs {
@@ -62,8 +67,103 @@
             padding: 12px 0;
         }
     }
+}
 
+.setting__payment-modal {
+    position: relative;
+}
 
+.payment__modal-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #5555553e;
+    z-index: 999;
+}
+
+.payment__modal {
+    width: 500px;
+    padding: 36px;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    z-index: 99999;
+
+    .payment__modal-header {
+        div {
+            font-size: 18px;
+            line-height: 100%;
+            text-align: center;
+        }
+
+        .payment__modal-close {
+            position: absolute;
+            right: 38px;
+            top: 38px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .payment__modal-title {
+        margin: 22px 0 12px 0;
+    }
+
+    .payment__modal-input {
+        width: 89%;
+        padding: 12px 22px;
+        border: 1px solid #1d1d1d33;
+        background: #FFFFFF;
+        box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    .payment__modal-inputs-small {
+        display: flex;
+
+        .payment__modal-input-small {
+            width: 30%;
+            padding: 12px 22px;
+            border: 1px solid #1d1d1d33;
+            background: #FFFFFF;
+            box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            font-size: 20px;
+            line-height: 100%;
+        }
+    }
+
+    .payment__modal-button {
+        width: 180px;
+        padding: 11px 18px;
+        margin: 22px auto;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        background: #2696D6;
+        border-radius: 15px;
+        font-size: 18px;
+        line-height: 100%;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 .css-jsexje-MuiSwitch-thumb {
@@ -81,4 +181,47 @@
 .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
     border: 1px solid #2696D6 !important;
     background: none !important;
+}
+
+@media(max-width: 1030px) {
+    .setting {
+        padding: 0 12px;
+
+        .setting__data-item {
+            margin-right: 32px;
+        }
+
+        .setting__data-switchs {
+            flex-wrap: wrap;
+        }
+
+        .setting__data-switchs .setting__data-switch {
+            margin-right: 32px;
+            margin-bottom: 22px;
+        }
+    }
+}
+
+@media(max-width: 690px) {
+    .setting {
+        .setting__data {
+            flex-wrap: wrap;
+        }
+
+        .setting__data-item {
+            margin-bottom: 22px;
+        }
+
+        .setting__data-switchs .setting__data-switch {
+            margin-right: 0;
+        }
+    }
+
+
+}
+
+@media(max-width: 490px) {
+    .setting .setting__data-item {
+        width: 100%;
+    }
 }

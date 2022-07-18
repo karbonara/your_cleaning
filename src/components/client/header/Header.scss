@@ -66,6 +66,11 @@
         font-size: 15px;
         line-height: 100%;
         text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            background: #F2F4F6;
+        }
     }
 
     .nav__cabinet-title {
@@ -154,7 +159,7 @@
     }
 
     .timetable {
-        width: 99%;
+        width: 70%;
 
         img {
             width: 30px;
@@ -169,5 +174,23 @@
         .timetable__text {
             font-size: 12px;
         }
+    }
+}
+
+@media(max-width: 590px) {
+    .timetable {
+        width: 80%;
+    }
+}
+
+@media(max-width: 490px) {
+    .timetable {
+        width: 90%;
+    }
+}
+
+@media(max-width: 420px) {
+    .timetable {
+        width: 98%;
     }
 }
