@@ -236,8 +236,32 @@
     }
 }
 
+@media(max-width: 1462px) {
+    .calculator-stock__tabs .tab {
+        width: 211px !important;
+        font-size: 18px !important;
+        padding: 25px 7px;
+    }
+}
+
 @media(max-width: 700px) {
     .calculator-stock__tabs {
         flex-wrap: wrap;
+        justify-content: center;
+
+        .tab {
+            margin: 12px 0;
+        }
+    }
+
+    .calculator-stock__content .content__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .calculator-stock__content .content__boxes {
+        margin: 12px 0;
+        width: 100%;
+        padding: 0 22px;
     }
 }

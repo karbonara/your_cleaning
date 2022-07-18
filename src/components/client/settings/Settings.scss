@@ -10,15 +10,73 @@
     }
 
     .setting__data-item {
-        margin-right: 82px;
+        margin-right: 122px;
+
+        div {
+            margin-bottom: 18px;
+        }
+    }
+
+    .setting__data-button {
+        padding: 6px 0;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 100%;
+        color: #2696D6;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .setting__data-add-item {
+        padding: 18px 0;
+
+        div {
+            padding-bottom: 12px;
+        }
     }
 
     .setting__button-add {
-        padding: 0px 18px;
-        font-size: 28px;
+        margin: 6px 0;
+        padding: 0px 22px;
+        font-size: 24px;
         border: none;
         color: #ffffff;
         background: #2696D6;
         border-radius: 10px;
+    }
+
+    .setting__data-switchs {
+        display: flex;
+        padding: 38px 0;
+
+        .setting__data-switch {
+            margin-right: 192px;
+        }
+
+        .setting__data-switch-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+    }
+
+    .css-jsexje-MuiSwitch-thumb {
+        border: 1px solid #2696D6;
+        width: 16px;
+        height: 16px;
+        transform: translate(2px, 2px);
+    }
+
+    .css-1yjjitx-MuiSwitch-track {
+        border: 1px solid #2696D6;
+        background: none;
+    }
+
+    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+        border: 1px solid #2696D6;
+        background: none;
     }
 }

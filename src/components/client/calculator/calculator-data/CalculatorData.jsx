@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import Cash from "../../../../assets/pay/cash.svg";
 import MasterCard from "../../../../assets/pay/Mastercard.svg";
 import Visa from "../../../../assets/pay/visa.svg";
@@ -18,17 +19,36 @@ const CalculatorData = () => {
       img: Cash,
       title: 'Cash',
     },
-  ]
+  ];
+
+  const { register, handleSubmit, reset, formState: { isValid } } = useForm();
+
+  const onSubmit = (data) => {
+    reset();
+  };
 
   return (
     <div className="calculator__data">
       <div className="calculator__data-title">Адрес оказания услуги</div>
-      <form action="">
-        <input className="calculator__data-input" type="text" placeholder="Область" />
-        <input className="calculator__data-input" type="text" placeholder="Город/район, улица, дом " />
-        <input className="calculator__data-input" type="text" placeholder="Квартира" />
-        <input className="calculator__data-input" type="text" placeholder="Наличие домофона" />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          className="calculator__data-input"
+          {...register("region", { required: true })}
+          type="text" placeholder="Область" />
+        <input
+          className="calculator__data-input"
+          {...register("city", { required: true })}
+          type="text" placeholder="Город/район, улица, дом " />
+        <input
+          className="calculator__data-input"
+          {...register("flat", { required: true })}
+          type="text" placeholder="Квартира" />
+        <input
+          className="calculator__data-input"
+          {...register("intercom", { required: false })}
+          type="text" placeholder="Наличие домофона" />
         <textarea
+          {...register("wishes", { required: false })}
           className="calculator__data-textarea"
           placeholder="Ваши пожелания"
           cols="10"
@@ -48,7 +68,12 @@ const CalculatorData = () => {
             ))
           }
         </div>
-        <button className="calculator__data-button">Перейти к оплате</button>
+        <input
+          type="submit"
+          className="calculator__data-button"
+          value={'Перейти к оплате'}
+        // disabled={!isValid}
+        />
       </form>
       <div className="calculator__data-text">
         Нажимая кнопку, Вы принимаете
