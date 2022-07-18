@@ -6,15 +6,21 @@ import "./Settings.scss";
 
 const Settings = () => {
 
-  const [addPayment, setAddPayment] = useState(false);
+
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
+  // Добавление инпутов для адреса 
+  const [addAdress, setAddAdress] = useState(false);
+  const handleAddAdress = () => {
+    setAddAdress(!addAdress);
+  };
+
+  // Открытие и валидация формы Способа оплаты
+  const [addPayment, setAddPayment] = useState(false);
   const handleAddPayment = () => {
     setAddPayment(!addPayment);
   };
-
-
-  const { register, handleSubmit, reset, formState: { isValid } } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmits = (data) => {
     reset();
   };
@@ -40,15 +46,9 @@ const Settings = () => {
         </div>
       </div>
 
-      <div className="setting__data-add-item">
+      <div className="setting__data-add-item setting__payment-modal">
         <div>Способы оплаты</div>
         <div>Вы еще не добавили способ оплаты</div>
-        <button className="setting__button-add">+</button>
-      </div>
-
-      <div className="setting__data-add-item setting__payment-modal">
-        <div>Адреса</div>
-        <div>Вы еще не добавили ни один адрес</div>
         <button onClick={handleAddPayment} className="setting__button-add">+</button>
         {
           addPayment &&
@@ -67,7 +67,7 @@ const Settings = () => {
                   <input
                     {...register("cardNumber", { required: true })}
                     className="payment__modal-input"
-                    type="text"
+                    type="number"
                     placeholder="Номер"
                   />
                 </label>
@@ -114,13 +114,45 @@ const Settings = () => {
                   <input
                     type="submit"
                     className="payment__modal-button"
-                    value={' Сохранить'}
+                    value={'Сохранить'}
                   // disabled={!isValid}
                   />
                 </div>
               </form>
             </div>
           </div>
+        }
+      </div>
+
+      <div className="setting__data-add-item setting__address-modal">
+        <div>Адреса</div>
+        {
+          (!addAdress) ?
+            <div>
+              <div>Вы еще не добавили ни один адрес</div>
+              <button onClick={handleAddAdress} className="setting__button-add">+</button>
+            </div> :
+            (
+              <div>
+                <div>
+                  <input className="setting__address-modal-input" type="text" placeholder="Область/регион" />
+                </div>
+                <div>
+                  <input className="setting__address-modal-input" type="text" placeholder="Город/район, улица, дом, квартира " />
+                </div>
+                <div>
+                  <input className="setting__address-modal-input" type="text" placeholder="Домофон (есть/нет)" />
+                </div>
+                <div>
+                  <input
+                    type="submit"
+                    className="setting__address-modal-button"
+                    value={'Сохранить'}
+                    onClick={handleAddAdress}
+                  />
+                </div>
+              </div>
+            )
         }
       </div>
       <div>
@@ -160,7 +192,7 @@ const Settings = () => {
         </div>
 
       </div>
-    </section>
+    </section >
   )
 }
 
