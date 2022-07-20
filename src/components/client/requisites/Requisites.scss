@@ -14,11 +14,25 @@
 
 .requisites__item-icon {
     display: flex;
+    align-items: center;
 
     img {
         margin-right: 12px;
         cursor: pointer;
     }
+}
+
+.requisites__item-input {
+    width: 530px;
+    padding: 12px 22px;
+    text-align: end;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 100%;
+    box-sizing: border-box;
 }
 
 .requisites__button {
