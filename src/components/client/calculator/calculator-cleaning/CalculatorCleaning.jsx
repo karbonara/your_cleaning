@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./CalculatorCleaning.scss";
 
 const CalculatorCleaning = () => {
+
   // Выбор помещения
   const [toggleState, setToggleState] = useState(1);
   const toggleTab = (index) => {
@@ -12,6 +13,11 @@ const CalculatorCleaning = () => {
   const [toggleActive, setToggleActive] = useState(2);
   const toggleActiveButton = (index) => {
     setToggleActive(index)
+  };
+
+  const [toggleQuestionIcon, setQuestionIcon] = useState(false);
+  const handleQuestionIcon = () => {
+    setQuestionIcon(!toggleQuestionIcon);
   };
 
   return (
@@ -64,8 +70,12 @@ const CalculatorCleaning = () => {
           </div>
           <div className="content__container">
             <div className="calculator-text__container">
-              <span className="calculator-text">Количество санузлов</span>
-              <img src={QuestionIcon} alt="icon" />
+              <span className="calculator-text calculator-text-bathroom-icon">Количество санузлов</span>
+              <img onClick={handleQuestionIcon} src={QuestionIcon} alt="icon" />
+              {
+                toggleQuestionIcon &&
+                <div className="calculator-text-bathroom-hover">ыыы</div>
+              }
             </div>
             <ul className="content__rooms">
               <li>1</li>

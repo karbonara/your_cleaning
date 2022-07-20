@@ -43,9 +43,7 @@ const CompletedServices = () => {
                 <div className="completed-services__text">{item.title}</div>
               </div>
               <div className="completed-services__container">
-                <div>
-                  {item.Object}
-                </div>
+                <div>{item.Object}</div>
                 <div className="completed-services__button">Оставить чаевые</div>
               </div>
               <div>

@@ -33,6 +33,7 @@
 
         .additional-services__item-text-main {
             padding-top: 11px;
+            padding-right: 11px;
             text-align: end;
             transition: 0.2s;
         }
@@ -56,11 +57,39 @@
         &:hover {
             background: #2696D6 !important;
 
+            path {
+                stroke: #FFFFFF;
+                fill: #FFFFFF;
+            }
+
             .additional-services__item-text {
                 color: #FFFFFF;
             }
         }
     }
+
+    .additional-services-add-buttons {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .additional-services-add-button {
+        padding: 8px;
+        margin: 0 12px;
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        border-radius: 15px;
+        border: none;
+    }
+}
+
+.additional-services__item-img-info {
+    position: relative !important;
+    transform: translate(8px, 0px);
 }
 
 @media(max-width: 1462px) {

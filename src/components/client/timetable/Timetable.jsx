@@ -37,7 +37,7 @@ const Timetable = () => {
             <li className="timetable__tab-item" key={index}>
               <div className="timetable__tab-item-container">
                 <div className="timetable__tab-text-ct timetable__tab-text">{item.title}</div>
-                <div className="timetable__tab-text">{item.text}</div>
+                <div className="timetable__tab-text timetable__tab-text-info">{item.text}</div>
               </div>
               <div className="timetable__tab-item-container">
                 <div className="timetable__tab-button">Изменить</div>

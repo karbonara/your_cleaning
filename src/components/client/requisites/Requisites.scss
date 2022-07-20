@@ -1,0 +1,32 @@
+.requisites {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.requisites__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 0;
+    width: 90%;
+    align-items: center;
+}
+
+.requisites__item-icon {
+    display: flex;
+
+    img {
+        margin-right: 12px;
+        cursor: pointer;
+    }
+}
+
+.requisites__button {
+    display: flex;
+    width: 93px;
+    padding: 18px 0;
+    color: #2696D6;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 143px;
+}

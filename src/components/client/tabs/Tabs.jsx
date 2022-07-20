@@ -3,6 +3,7 @@ import Timetable from "../timetable/Timetable";
 import CompletedServices from "../completed-services/CompletedServices";
 import PaymentHistory from "../payment-history/PaymentHistory";
 import Settings from "../settings/Settings";
+import Requisites from "../requisites/Requisites";
 import "./Tabs.scss";
 
 const Tabs = () => {
@@ -30,29 +31,45 @@ const Tabs = () => {
         <li
           onClick={() => toggleTab(4)}
           className={toggleState === 4 ? "tab__item tab__item-active" : "tab__item"}
+        >Реквизиты</li>
+        <li
+          onClick={() => toggleTab(5)}
+          className={toggleState === 5 ? "tab__item tab__item-active" : "tab__item"}
         >Настройки</li>
       </ul>
+
       <div className="tab__content">
+
         <div
           className={toggleState === 1 ? "content tab__content-active" : "content"}
         >
           <Timetable />
         </div>
+
         <div
           className={toggleState === 2 ? "content tab__content-active" : "content"}
         >
           <CompletedServices />
         </div>
+
         <div
           className={toggleState === 3 ? "content tab__content-active" : "content"}
         >
           <PaymentHistory />
         </div>
+
         <div
           className={toggleState === 4 ? "content tab__content-active" : "content"}
         >
+          <Requisites />
+        </div>
+
+        <div
+          className={toggleState === 5 ? "content tab__content-active" : "content"}
+        >
           <Settings />
         </div>
+
       </div>
     </section>
   )

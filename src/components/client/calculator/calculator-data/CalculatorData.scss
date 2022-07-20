@@ -92,13 +92,23 @@
     }
 
     .calculator__data-pay-item {
-        padding: 3px 12px;
+        padding: 6px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 30px;
         margin-right: 14px;
         text-align: center;
         background: #FFFFFF;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.214);
+        }
     }
 }
 

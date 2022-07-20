@@ -8,6 +8,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 18px 28px;
         margin-bottom: 23px;
         box-sizing: border-box;
@@ -34,5 +35,23 @@
     .completed-services__container {
         display: flex;
         align-items: center;
+    }
+}
+
+@media(max-width: 630px) {
+    .completed-services__items {
+        .completed-services__container {
+            padding: 12px 0;
+        }
+
+        .completed-services__item {
+            padding: 18px 14px;
+        }
+
+
+
+        .completed-services__text {
+            width: 100%;
+        }
     }
 }
