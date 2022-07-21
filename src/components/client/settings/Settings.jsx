@@ -25,6 +25,21 @@ const Settings = () => {
     reset();
   };
 
+  const [addNumber, setAddNumber] = useState(false);
+  const handleNumber = () => {
+    setAddNumber(!addNumber);
+  };
+
+  const [addMail, setAddMail] = useState(false);
+  const handleMail = () => {
+    setAddMail(!addMail);
+  };
+
+  const [addPassword, setAddPassword] = useState(false);
+  const handlePassword = () => {
+    setAddPassword(!addPassword);
+  };
+
   return (
     <section className="setting">
       <div>Данные для входа</div>
@@ -32,39 +47,42 @@ const Settings = () => {
         <div className="setting__data-item">
           <div>Номер телефона</div>
           <div>+7 999 000 00 00</div>
-          <div className="setting__data-button">Изменить</div>
-          <div className="setting__data-change-modal">
-            <input className="setting__data-change-modal-input" type="text" placeholder="Новый номер телефона" />
-            <div>
-              <span className="setting__data-change-modal-text">Вам на телефон был отправлен код</span>
-              <input className="setting__data-change-modal-input" type="text" placeholder="Введите код" />
-              <input className="setting__address-modal-button" type="submit" value={"Сохранить"} />
-            </div>
-          </div>
+          <div onClick={handleNumber} className="setting__data-button">Изменить</div>
+          {addNumber &&
+            <div className="setting__data-change-modal">
+              <input className="setting__data-change-modal-input" type="text" placeholder="Новый номер телефона" />
+              <div>
+                <span className="setting__data-change-modal-text">Вам на телефон был отправлен код</span>
+                <input className="setting__data-change-modal-input" type="text" placeholder="Введите код" />
+                <input onClick={handleNumber} className="setting__address-modal-button" type="submit" value={"Сохранить"} />
+              </div>
+            </div>}
         </div>
         <div className="setting__data-item">
           <div>E-mail</div>
           <div>ex@ex.com</div>
-          <div className="setting__data-button">Изменить</div>
-          <div className="setting__data-change-modal">
-            <input className="setting__data-change-modal-input" type="text" placeholder="Новый E-mail" />
-            <div>
-              <span className="setting__data-change-modal-text">Вам на телефон был отправлен код</span>
-              <input className="setting__data-change-modal-input" type="text" placeholder="Введите код" />
-              <input className="setting__address-modal-button" type="submit" value={"Сохранить"} />
-            </div>
-          </div>
+          <div onClick={handleMail} className="setting__data-button">Изменить</div>
+          {addMail &&
+            <div className="setting__data-change-modal">
+              <input className="setting__data-change-modal-input" type="text" placeholder="Новый E-mail" />
+              <div>
+                <span className="setting__data-change-modal-text">Вам на телефон был отправлен код</span>
+                <input className="setting__data-change-modal-input" type="text" placeholder="Введите код" />
+                <input onClick={handleMail} className="setting__address-modal-button" type="submit" value={"Сохранить"} />
+              </div>
+            </div>}
         </div>
         <div className="setting__data-item">
           <div>Пароль</div>
           <div>Был изменен 19 дней назад</div>
-          <div className="setting__data-button">Изменить</div>
-          <div className="setting__data-change-modal">
-            <input className="setting__data-change-modal-input" type="text" placeholder="Старый пароль" />
-            <input className="setting__data-change-modal-input" type="text" placeholder="Новый пароль" />
-            <input className="setting__data-change-modal-input" type="text" placeholder="Повторите новый пароль" />
-            <input className="setting__address-modal-button" type="submit" value={"Сохранить"} />
-          </div>
+          <div onClick={handlePassword} className="setting__data-button">Изменить</div>
+          {addPassword &&
+            <div className="setting__data-change-modal">
+              <input className="setting__data-change-modal-input" type="text" placeholder="Старый пароль" />
+              <input className="setting__data-change-modal-input" type="text" placeholder="Новый пароль" />
+              <input className="setting__data-change-modal-input" type="text" placeholder="Повторите новый пароль" />
+              <input onClick={handlePassword} className="setting__address-modal-button" type="submit" value={"Сохранить"} />
+            </div>}
         </div>
       </div>
 

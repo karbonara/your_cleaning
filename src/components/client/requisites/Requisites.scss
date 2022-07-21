@@ -35,6 +35,13 @@
     box-sizing: border-box;
 }
 
+.requisites__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 90%;
+}
+
 .requisites__button {
     display: flex;
     width: 93px;
@@ -43,4 +50,56 @@
     cursor: pointer;
     margin-left: auto;
     margin-right: 143px;
+}
+
+.requisites__cancel-button {
+    color: #2696D6;
+    cursor: pointer;
+    margin-right: 22px;
+    padding: 12px;
+}
+
+.requisites__button-save {
+    padding: 12px;
+    display: flex;
+    width: 180px;
+    justify-content: center;
+    background: #2696D6;
+    border-radius: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+@media(max-width: 990px) {
+    .requisites__item {
+        width: 94%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        padding: 18px 0;
+
+        div {
+            padding: 8px 0;
+        }
+    }
+
+    .requisites__button {
+        margin-left: 26px;
+    }
+
+    .requisites__buttons {
+        padding: 19px 0;
+        justify-content: flex-start;
+    }
+
+    .requisites__item-input {
+        text-align: start;
+        width: 400px;
+    }
+}
+
+@media(max-width: 500px) {
+    .requisites__item-input {
+        width: 90%;
+    }
 }
