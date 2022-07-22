@@ -7,7 +7,6 @@ const Requisites = () => {
     const [toggleInput, setToggleInput] = useState(false);
     const handleInput = () => {
         setToggleInput(!toggleInput);
-        console.log(1);
     };
 
     return (

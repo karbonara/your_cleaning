@@ -14,6 +14,8 @@ import OvenImg from "../../../../assets/img-services/oven.svg";
 import BakeImg from "../../../../assets/img-services/bake.svg";
 import PutAwayImg from "../../../../assets/img-services/putAway.svg";
 import "./AdditionalServices.scss";
+import { useState } from "react";
+// import Items from "./Items";
 
 const AdditionalServices = () => {
 
@@ -122,31 +124,36 @@ const AdditionalServices = () => {
     },
   ];
 
+  const [count, setCount] = useState(0);
+
+  const [items, setItems] = useState(services)
+
   return (
     <div className="additional-services">
       <div className="additional-services__title">Дополнительные услуги</div>
       <ul className="additional-services__items">
         {
-          services.map((item, index) => (
-            <li className="additional-services__item" key={index}>
+          items.map((item, index) => (
+            <li className="additional-services__item" key={item.title}>
               <div className="additional-services__item-text-main">
                 <div className="additional-services__item-text">{item.title}{item.imgInfo}</div>
 
                 <div className="additional-services__item-text">{item.price} ₽ {item.additionText}</div>
               </div>
               <img src={item.img} alt={item.title} />
-              {/* {
+              {
                 <div className="additional-services-add-buttons">
                   <button className="additional-services-add-button">-</button>
-                  <div>1</div>
+                  <div>{count}</div>
                   <button className="additional-services-add-button">+</button>
                 </div>
-              } */}
+              }
             </li>
           ))
         }
+        {/* <Items services={services} count={count} setCount={setCount} /> */}
       </ul>
-    </div>
+    </div >
   )
 }
 

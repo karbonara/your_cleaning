@@ -6,7 +6,6 @@ import "./Settings.scss";
 
 const Settings = () => {
 
-
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
   // Добавление инпутов для адреса 
@@ -175,7 +174,11 @@ const Settings = () => {
             (
               <div>
                 <div>
-                  <input className="setting__address-modal-input" type="text" placeholder="Область/регион" />
+                  <input
+                    className="setting__address-modal-input"
+                    type="text"
+                    placeholder="Область/регион"
+                  />
                 </div>
                 <div>
                   <input className="setting__address-modal-input" type="text" placeholder="Город/район, улица, дом, квартира " />
