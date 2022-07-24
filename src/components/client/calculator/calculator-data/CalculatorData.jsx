@@ -4,7 +4,32 @@ import MasterCard from "../../../../assets/pay/Mastercard.svg";
 import Visa from "../../../../assets/pay/visa.svg";
 import "./CalculatorData.scss";
 
-const CalculatorData = () => {
+import { useEffect, useState } from "react";
+
+const CalculatorData = ({ optionCleaning, servicesCleaning }) => {
+
+  // Объект цен на услуги
+  const optionsPrice = {
+    cleaning: [ 100, 200, 300 ],
+    room: [ 500, 1000, 1500 ],
+  };
+
+  // Состояние цены
+  const [ price, setPrice ] = useState(600);
+
+  // Функция меняет состояние цены в зависимости от выбранных опций
+  const calcPrice = () => {
+    let price = 0;
+    price += optionsPrice.cleaning[optionCleaning.cleaningType] || 0;
+    price += optionsPrice.room[optionCleaning.roomType] || 0;
+
+    price += servicesCleaning.reduce((accum, service) => accum + service.price * service.count, 0);
+
+    setPrice(price);
+  };
+
+  // Подсчёт цены при изменении состояния опций
+  useEffect(() => calcPrice(), [ optionCleaning, servicesCleaning ]);
 
   const payItems = [
     {
@@ -54,9 +79,14 @@ const CalculatorData = () => {
           cols="10"
           rows="10"
         ></textarea>
+        <ul>
+          { servicesCleaning.map((service) => {
+            return service.count ? <li key={service.title}> { service.title }  | { service.count } </li> : "";
+          }) }
+        </ul>
         <div className="calculator__data-total">
           <div>Сумма</div>
-          <div>6450 ₽</div>
+          <div>{ price } ₽</div>
         </div>
         <div>Отменить услугу можно не позднее, чем за 1 час до начала оказания услуг</div>
         <div className="calculator__data-pay-items">

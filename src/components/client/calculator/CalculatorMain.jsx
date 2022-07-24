@@ -3,12 +3,15 @@ import CalculatorCleaning from "./calculator-cleaning/CalculatorCleaning";
 import CalculatorStock from "./calculator-stock/CalculatorStock";
 import "./CalculatorMain.scss";
 
-const CalculatorMain = () => {
+const CalculatorMain = ({ optionCleaning, servicesCleaning }) => {
+
   return (
     <>
       <div className="calculator">
-        <CalculatorCleaning />
-        <AdditionalServices />
+        <CalculatorCleaning optionCleaning={optionCleaning} />
+        <AdditionalServices servicesCleaning={servicesCleaning} />
+
+
         <CalculatorStock />
       </div>
     </>
