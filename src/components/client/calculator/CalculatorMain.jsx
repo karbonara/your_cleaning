@@ -1,15 +1,15 @@
 import AdditionalServices from "./additional-services/AdditionalServices";
 import CalculatorCleaning from "./calculator-cleaning/CalculatorCleaning";
-import CalculatorStock from "./calculator-stock/CalculatorStock";
+// import CalculatorStock from "./calculator-stock/CalculatorStock";
 import "./CalculatorMain.scss";
 
-const CalculatorMain = () => {
+const CalculatorMain = ({ optionCleaning, servicesCleaning }) => {
   return (
     <>
       <div className="calculator">
-        <CalculatorCleaning />
-        <AdditionalServices />
-        <CalculatorStock />
+        <CalculatorCleaning optionCleaning={optionCleaning} />
+        <AdditionalServices servicesCleaning={servicesCleaning} />
+        {/* <CalculatorStock /> */}
       </div>
     </>
   )

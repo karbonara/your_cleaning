@@ -14,19 +14,22 @@ import OvenImg from "../../../../assets/img-services/oven.svg";
 import BakeImg from "../../../../assets/img-services/bake.svg";
 import PutAwayImg from "../../../../assets/img-services/putAway.svg";
 import "./AdditionalServices.scss";
-import { useState } from "react";
-// import Items from "./Items";
+import { useState, useEffect } from "react";
 
-const AdditionalServices = () => {
+const AdditionalServices = ({ servicesCleaning }) => {
 
-  const services = [
+  const servicesData = [
     {
+      id: 0,
+      count: 0,
       title: 'Помыть посуду',
       price: 250,
       additionText: '/ 30 мин',
       img: TablewareImg,
     },
     {
+      id: 1,
+      count: 0,
       title: 'Мойка окон',
       price: 500,
       additionText: '',
@@ -39,84 +42,112 @@ const AdditionalServices = () => {
       ,
     },
     {
+      id: 2,
+      count: 0,
       title: 'Мойка балконного остекления',
       price: 500,
       additionText: '/ балкон',
       img: WindowImg,
     },
     {
+      id: 3,
+      count: 0,
       title: 'Стирка вещей',
       price: 500,
       additionText: '/ ч',
       img: WashImg,
     },
     {
+      id: 4,
+      count: 0,
       title: 'Глажка вещей',
       price: 500,
       additionText: '/ ч',
       img: IroningImg,
     },
     {
+      id: 5,
+      count: 0,
       title: 'Дезинфекция',
       price: 500,
       additionText: '',
       img: DisinfectionImg,
     },
     {
+      id: 6,
+      count: 0,
       title: 'Отвезти ключи',
       price: 500,
       additionText: '',
       img: KeyImg,
     },
     {
+      id: 7,
+      count: 0,
       title: 'Выезд за МКАД',
       price: 500,
       additionText: '',
       img: DepartureImg,
     },
     {
+      id: 8,
+      count: 0,
       title: 'Выезд в область',
       price: 250,
       additionText: '/ 30 мин',
       img: LeavingTheRegionImg,
     },
     {
+      id: 9,
+      count: 0,
       title: 'Помыть лоток',
       price: 250,
       additionText: '',
       img: TrayImg,
     },
     {
+      id: 10,
+      count: 0,
       title: 'Поменять белье',
       price: 200,
       additionText: '',
       img: UnderwearImg,
     },
     {
+      id: 11,
+      count: 0,
       title: 'Убраться на балконе',
       price: 700,
       additionText: '',
       img: BalconyImg,
     },
     {
+      id: 12,
+      count: 0,
       title: 'Помыть холодильник',
       price: 300,
       additionText: '',
       img: FridgeImg,
     },
     {
+      id: 13,
+      count: 0,
       title: 'Помыть духовку',
       price: 400,
       additionText: '',
       img: OvenImg,
     },
     {
+      id: 14,
+      count: 0,
       title: 'Помыть СВЧ-печь',
       price: 200,
       additionText: '',
       img: BakeImg,
     },
     {
+      id: 15,
+      count: 0,
       title: 'Убрать что-то еще',
       price: 400,
       additionText: '/ 30 мин',
@@ -124,9 +155,26 @@ const AdditionalServices = () => {
     },
   ];
 
-  const [count, setCount] = useState(0);
+  const [services, setServices] = useState(servicesData);
 
-  const [items, setItems] = useState(services)
+  // При изменении здешних сервисов, вызываем мутацию состояния сервисов в Calculator
+  useEffect(() => {
+    const servicesForPrice = services.map(service => {
+      return { id: service.id, price: service.price, count: service.count, title: service.title };
+    })
+
+    servicesCleaning.setServicesCleaning(servicesForPrice);
+  }, [services]);
+
+  const [items, setItems] = useState(services);
+
+  // Изменить количество услуги в корзине
+  const addCount = (index, step) => {
+    const newServices = [...services];
+
+    newServices[index].count = newServices[index].count + step > 0 ? newServices[index].count + step : 0;
+    setServices(newServices);
+  };
 
   return (
     <div className="additional-services">
@@ -143,9 +191,9 @@ const AdditionalServices = () => {
               <img src={item.img} alt={item.title} />
               {
                 <div className="additional-services-add-buttons">
-                  <button className="additional-services-add-button">-</button>
-                  <div>{count}</div>
-                  <button className="additional-services-add-button">+</button>
+                  <button onClick={() => addCount(index, -1)} className="additional-services-add-button">-</button>
+                  <div>{item.count}</div>
+                  <button onClick={() => addCount(index, 1)} className="additional-services-add-button">+</button>
                 </div>
               }
             </li>

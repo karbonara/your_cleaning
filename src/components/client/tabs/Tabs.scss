@@ -73,6 +73,12 @@
 @media(max-width: 640px) {
     .tabs__items {
         flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 32px;
+
+        .tab__item {
+            border-radius: 18px;
+        }
     }
 }
 
