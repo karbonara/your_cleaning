@@ -9,9 +9,12 @@ const CalculatorData = ({ optionCleaning, servicesCleaning }) => {
 
   // Объект цен на услуги
   const optionsPrice = {
-    cleaning: [100, 200, 300],
-    room: [500, 1000, 1500],
-    roomFlat: [100, 200, 300, 400, 500],
+    cleaning: [0, 0, 0],
+    room: [0, 0, 0],
+    roomFlatSupporting: [1600, 2500, 3400, 4000, 4600],
+    roomFlatGeneral: [3100, 4000, 4900, 5500, 6100],
+    roomFlatRepair: [5100, 6000, 6900, 7500, 8100],
+    bathroom: [600, 1200],
   };
 
   // Состояние цены
@@ -23,7 +26,13 @@ const CalculatorData = ({ optionCleaning, servicesCleaning }) => {
     price += optionsPrice.cleaning[optionCleaning.cleaningType] || 0;
     price += optionsPrice.room[optionCleaning.roomType] || 0;
 
-    price += optionsPrice.roomFlat[optionCleaning.roomFlat] || 0;
+    price += optionsPrice.roomFlatSupporting[optionCleaning.roomFlatSupporting] || 0;
+
+    price += optionsPrice.roomFlatGeneral[optionCleaning.roomFlatGeneral] || 0;
+
+    price += optionsPrice.roomFlatRepair[optionCleaning.roomFlatRepair] || 0;
+
+    price += optionsPrice.bathroom[optionCleaning.bathroom] || 0;
 
     price += servicesCleaning.reduce((accum, service) => accum + service.price * service.count, 0);
 
@@ -81,9 +90,9 @@ const CalculatorData = ({ optionCleaning, servicesCleaning }) => {
           cols="10"
           rows="10"
         ></textarea>
-        <ul>
+        <ul className="calculator__data-list">
           {servicesCleaning.map((service) => {
-            return service.count ? <li key={service.title}> {service.title} - {service.count} шт </li> : "";
+            return service.count ? <li key={service.title}> <div>{service.title}</div>  <div>{service.count} шт</div> </li> : "";
           })}
         </ul>
         <div className="calculator__data-total">

@@ -112,6 +112,19 @@
     }
 }
 
+.calculator__data-list {
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 100%;
+        padding: 11px 0;
+    }
+}
+
 @media(max-width: 1462px) {
     .calculator__data {
         width: 342px;
