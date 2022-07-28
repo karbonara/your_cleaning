@@ -49,3 +49,9 @@
         opacity: 0.9;
     }
 }
+
+@media (max-width: 600px) {
+    .balance__title {
+        display: none;
+    }
+}

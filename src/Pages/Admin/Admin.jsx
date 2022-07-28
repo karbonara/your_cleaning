@@ -6,6 +6,7 @@ import Services from "../../components/services/Services";
 import SimpleSlider from "../../components/slider/Slider"
 import Story from "../../components/story/Story";
 import NavMenu from "../../components/nav/Nav";
+import Calendar from "../../components/calendar/Calendar";
 import "./Admin.scss";
 
 const Admin = () => {
@@ -26,6 +27,7 @@ const Admin = () => {
               <Connection />
               <Finance />
             </div>
+            <Calendar />
           </div>
         </section>
       </div>
