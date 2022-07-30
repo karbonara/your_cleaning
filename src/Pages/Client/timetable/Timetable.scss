@@ -16,6 +16,7 @@
         border-radius: 60px;
         transition: 0.3s;
         cursor: pointer;
+        position: relative;
 
         &:hover {
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.273);
@@ -43,6 +44,16 @@
                 opacity: 0.7;
             }
         }
+
+        .timetable__notification-icon {
+            position: absolute;
+            top: 40%;
+            left: -10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50px;
+            background: #CC2318;
+        }
     }
 }
 
@@ -66,6 +77,11 @@
                 position: absolute;
                 top: 45px;
                 right: 14px;
+            }
+
+            .timetable__notification-icon {
+                top: 45%;
+                left: 0;
             }
         }
     }

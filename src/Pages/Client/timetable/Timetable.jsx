@@ -9,19 +9,22 @@ const Timetable = () => {
       id: 1,
       title: 'Расписание',
       text: 'Запланирована уборка на 16:00, 7 окт 2021',
-      date: '7 окт 2021 15:00'
+      date: '7 окт 2021 15:00',
+      notificationIcon: <div className="timetable__notification-icon"></div>,
     },
     {
       id: 2,
       title: 'Расписание',
       text: 'Запланирована уборка на 16:00, 7 окт 2021',
-      date: '7 окт 2021 15:00'
+      date: '7 окт 2021 15:00',
+      notificationIcon: <div className="timetable__notification-icon"></div>,
     },
     {
       id: 3,
       title: 'Расписание',
       text: 'Запланирована уборка на 16:00, 7 окт 2021',
-      date: '7 окт 2021 15:00'
+      date: '7 окт 2021 15:00',
+      notificationIcon: <div className="timetable__notification-icon"></div>,
     },
     {
       id: 4,
@@ -48,6 +51,7 @@ const Timetable = () => {
       {
         posts.map((item, index) => (
           <li key={index} className="timetable__item">
+            {item.notificationIcon}
             <div>
               <div className="timetable__item-title">{item.title}</div>
               <div className="timetable__item-text">{item.text}</div>

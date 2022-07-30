@@ -3,6 +3,7 @@
 }
 
 .balance__title {
+    margin-bottom: 82px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -12,9 +13,9 @@
 
 .balance__input {
     display: flex;
-    margin: 32px auto;
-    width: 180px;
-    padding: 6px 38px;
+    margin: 42px auto;
+    width: 262px;
+    padding: 6px 48px;
     border: none;
     box-sizing: border-box;
     justify-content: center;
@@ -28,17 +29,46 @@
     color: rgba(0, 0, 0, 0.4);
 }
 
+.balance__item {
+    display: flex;
+    width: 262px;
+    padding: 22px 12px;
+    justify-content: center;
+    align-items: center;
+    margin: 42px auto;
+    box-sizing: border-box;
+    border: 0.5px solid #80ACF2;
+    border-radius: 10px;
+}
+
+.balance__item-img {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    height: 55px;
+    margin: 0 6px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15.8753px;
+    box-sizing: border-box;
+
+    img {
+        width: 50px;
+    }
+}
+
 .balance__button {
     display: flex;
-    margin: 32px auto;
+    margin: 42px auto;
     padding: 6px 18px;
-    width: 180px;
+    width: 262px;
     justify-content: center;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 25px;
     line-height: 100%;
     background: #000000;
